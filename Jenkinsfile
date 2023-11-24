@@ -10,7 +10,7 @@ pipeline {
 
         stage('validate') {
             steps {
-                echo 'terraform validate'
+                sh 'terraform validate'
             }
         }
 
