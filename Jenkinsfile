@@ -14,15 +14,27 @@ pipeline {
             }
         }
 
-        stage('plan') {
+        stage('workspace') {
             steps {
-                echo 'Hola Mundo Cruel'
+                sh 'terraform workspace list'
             }
         }
 
-         stage('apply') {
+         stage('workspace') {
             steps {
-                echo 'Hola Mundo Cruel'
+                sh 'terraform workspace new dev'
+            }
+        }
+
+        stage('plan') {
+            steps {
+                sh 'terraform plan --var-file=dev-vars.tfvars'
+            }
+        }
+
+        stage('apply') {
+            steps {
+                sh 'terraform apply'
             }
         }
 
