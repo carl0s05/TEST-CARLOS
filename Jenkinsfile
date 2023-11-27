@@ -20,7 +20,7 @@ pipeline {
             }
         }
 
-         stage('workspace') {
+         stage('workspace-list') {
             steps {
                 sh 'terraform workspace new dev'
             }
