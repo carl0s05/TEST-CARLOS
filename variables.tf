@@ -35,7 +35,4 @@ variable "environment" {
   description = "Ambiente"
   type        = string
 }
-variable "environment" {
-  description = "Variable utilizada para el nombrado estándar de los recursos (RESORCE-ENVIROMENT)"
-  type        = string
-}
+
