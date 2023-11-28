@@ -3,7 +3,7 @@ terraform {
   backend "s3" {
     bucket               = "s3hatest"
     key                  = "tfstate/s3hatest.tfstate"
-    workspace_key_prefix = "UnityHA"
+    workspace_key_prefix = "HATEST"
     region               = "us-west-2"
     
     #endpoints = {
